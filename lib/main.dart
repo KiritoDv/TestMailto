@@ -142,8 +142,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 var subject = "Soporte Requerido";
                 launchNoAsyncURL("mailto:servicio@playroomsck.com?subject=$subject&body=HELP");
               },
-              child: new Text("Small Text"),
-            )
+              child: new Text("Small Text No Async"),
+            ),
+            RaisedButton(
+              padding: const EdgeInsets.all(2.0),
+              textColor: Colors.white,
+              color: Colors.blue,
+              onPressed: (){
+                var subject = "Soporte Requerido";
+                launchAsyncURL("mailto:servicio@playroomsck.com?subject=$subject&body=HELP");
+              },
+              child: new Text("Small Text Async"),
+            ),
           ],
         ),
       )      
